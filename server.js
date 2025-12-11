@@ -1,9 +1,9 @@
 const path = require("path");
 
-// Servir arquivos estáticos (HTML, CSS, JS)
+// Servir arquivos estáticos
 app.use(express.static(path.join(__dirname, "public")));
 
-// Rota principal (carrega o index.html)
+// Página inicial
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
