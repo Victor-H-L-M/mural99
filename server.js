@@ -1,3 +1,13 @@
+const path = require("path");
+
+// Servir arquivos estáticos (HTML, CSS, JS)
+app.use(express.static(path.join(__dirname, "public")));
+
+// Rota principal (carrega o index.html)
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
 const express = require('express');   
 const cors = require('cors');
 require('dotenv').config();
