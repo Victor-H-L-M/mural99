@@ -1,0 +1,123 @@
+:root{
+  --bg:#c0c0c0;        
+  --panel:#e0e0e0;      
+  --panel-dark:#a0a0a0; 
+  --accent:#000080;     
+  --text:#000;
+  --btn-face:#d4d0c8;
+  --btn-dark:#404040;
+  --btn-highlight:#ffffff;
+  --font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  --mono: "Lucida Console", Monaco, monospace;
+}
+
+*{box-sizing:border-box}
+html,body{
+  height:100%;
+}
+body{
+  margin:0;
+  font-family: var(--font-family);
+  background: linear-gradient(#d0d0d0, var(--bg));
+  color:var(--text);
+  -webkit-font-smoothing: auto;
+  padding:20px;
+}
+
+.container{
+  max-width:760px;
+  margin:0 auto;
+}
+
+h1{
+  margin:0 0 12px 0;
+  padding:10px 12px;
+  background:linear-gradient(#000080, #000060);
+  color:white;
+  font-weight:700;
+  box-shadow: inset 0 -2px rgba(0,0,0,0.2);
+  border:3px outset var(--panel-dark);
+  border-radius:2px;
+  font-size:20px;
+}
+
+section{
+  background:var(--panel);
+  border:2px solid var(--panel-dark);
+  margin:14px 0;
+  padding:10px;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.15);
+}
+
+section h2{
+  margin:0 0 8px 0;
+  font-size:14px;
+  color:#111;
+}
+
+input[type="text"], input[type="number"]{
+  padding:6px;
+  margin-right:8px;
+  border:2px solid var(--btn-dark);
+  background:linear-gradient(var(--btn-face), #cfcfcf);
+  box-shadow: inset 1px 1px var(--btn-highlight);
+  font-family: var(--mono);
+  font-size:13px;
+  width:230px;
+}
+
+button{
+  padding:6px 10px;
+  border:2px solid var(--btn-dark);
+  background:linear-gradient(var(--btn-face), #cfcfcf);
+  box-shadow: inset 1px 1px var(--btn-highlight);
+  font-weight:600;
+  cursor:pointer;
+  font-size:13px;
+  font-family: var(--font-family);
+}
+
+button:active{
+  box-shadow: inset 1px 1px rgba(0,0,0,0.6);
+  transform:translateY(1px);
+}
+
+#lista-recados{
+  list-style:none;
+  padding:8px;
+  margin:8px 0 0 0;
+  background: linear-gradient(#f5f5f5, #eaeaea);
+  border:2px inset var(--panel-dark);
+  min-height:120px;
+}
+
+#lista-recados li{
+  padding:8px;
+  margin-bottom:6px;
+  border:1px solid #bdbdbd;
+  background: linear-gradient(#fffef0, #fffaf0);
+  font-family: var(--mono);
+}
+
+form { display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+
+#mensagem { width:340px; }
+#nomeUsuario, #usuarioId { width:200px; }
+
+.note {
+  font-size:12px;
+  color:#333;
+  margin-top:8px;
+}
+
+input:focus, button:focus {
+  outline: 2px dotted #000;
+  outline-offset: 2px;
+}
+
+@media (max-width:520px){
+  #mensagem { width:100%; }
+  input[type="text"], input[type="number"] { width:100%; }
+  form { flex-direction:column; align-items:stretch; }
+  h1 { font-size:18px; }
+}

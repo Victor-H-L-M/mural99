@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Mural de Recados</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<h1>Mural de Recados</h1>
+
+
+<section>
+<h2>Cadastrar Usuário</h2>
+<form id="form-usuario">
+<input type="text" id="nomeUsuario" placeholder="Nome do usuário" required>
+<button type="submit">Cadastrar</button>
+</form>
+</section>
+
+
+<section>
+<h2>Novo Recado</h2>
+<form id="form-recado">
+<input type="text" id="mensagem" placeholder="Digite seu recado" required>
+<input type="number" id="usuarioId" placeholder="ID do usuário" required>
+<button type="submit">Enviar</button>
+</form>
+</section>
+
+
+<section>
+<h2>Recados</h2>
+<ul id="lista-recados"></ul>
+</section>
+
+
+<script src="app.js"></script>
+</body>
+</html>
