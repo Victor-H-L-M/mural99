@@ -3,7 +3,7 @@ const formRecado = document.getElementById('form-recado');
 const listaRecados = document.getElementById('lista-recados');
 
 // Usar a URL completa do backend (porta 4000) quando servir estático via Live Server
-const API_URL = 'http://127.0.0.1:4000/api'; // apontar diretamente para o backend
+const API_URL = '/api';
 
 if (!formUsuario) console.warn('form-usuario não encontrado no DOM');
 if (!formRecado) console.warn('form-recado não encontrado no DOM');
